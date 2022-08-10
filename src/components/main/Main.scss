@@ -1,0 +1,164 @@
+.main {
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #fbefef;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    clip-path: polygon(100% 33%, 0% 100%, 100% 100%);
+    background: linear-gradient(
+      45deg,
+      rgba(216, 46, 8, 0.085),
+      rgba(62, 7, 189, 0.126)
+    );
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main_container {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.main_contant {
+  margin-left: 3.44rem;
+}
+
+.text {
+  line-height: 45px;
+
+  p {
+    color: rgb(157, 155, 155);
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .icons {
+    display: flex;
+
+    .icon {
+      margin-top: 1rem;
+      margin-right: 1.44rem;
+      color: rgb(157, 155, 155);
+      font-size: 35px;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(25deg,rgba(1, 60, 210, 0.753),rgb(255, 72, 6));
+        border-radius: 15%;
+        color: black;
+      }
+    }
+  }
+
+  
+  
+}
+
+.buttons {
+
+    button {
+        padding: 10px 30px;
+        margin-top: 2rem;
+        margin-right: 1rem;
+       
+        background: linear-gradient(25deg,rgba(1, 60, 210, 0.753),rgb(255, 72, 6));
+        color: #fff;
+        border: 1px solid #fff;
+        cursor: pointer;
+        border-radius: 15px;
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+}
+
+
+
+.main_img {
+    margin: 40px;
+   // padding: 20px;
+    clip-path: circle(45% at 50% 49%);
+    cursor: pointer;
+
+    
+    img {
+        background: linear-gradient(25deg,rgba(1, 60, 210, 0.753),rgb(255, 72, 6));
+
+    }
+}
+
+@media(max-width:2000px){
+  .text{
+    white-space: nowrap;
+    line-height: 30px;
+    p{
+        font-size: 30px;
+    }
+    h1{
+        font-size: 30px;
+    }
+  }
+.buttons{
+    button{
+        padding: 8px 20px;  
+    }
+}
+.icons {
+    margin-right: 1rem;
+    .icon {
+        font-size: 25px;
+    }
+}
+
+}
+
+@media(max-width:600px){
+    .main_contant{
+        margin-left: 0;
+    }
+    .main_container{
+        text-align: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .main_img{
+        img{
+            width: 20rem;
+        }
+        
+    }
+
+    .text {
+        h1 {
+            font-size: 23px;
+        }
+        p {
+            color: #000;
+            font-size: 11px;
+        }
+    }
+
+    .icons{ 
+        margin-left: 1.5rem;
+    .icon {
+        color: firebrick;
+        
+    }
+}
+}
